@@ -43,7 +43,7 @@
         height: auto;
         width: 100%;
     }
-}
+} 
     .item3 {
         display: grid;
         grid-template-rows: auto;
