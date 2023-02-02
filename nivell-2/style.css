@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+}
+body {
+    margin: 0 5%;
+}
+.center {
+    margin: auto;
+    padding: 10px;
+  }
+.containerHeader {
+    background-image: url(header.jpg);
+    background-size: cover;
+    background-position: 0%;
+    width: auto;
+}
+.ContainerNav {
+    display: flex;
+    width: auto;
+}
+#headerimage {
+    width: 100px;
+    height: 100px;
+}
+.ContainerNavImage {
+    width: 25%;
+}
+.ContainerNavList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.Icon2 {
+    display: block;
+    opacity: 1;
+}
+.ContainerNavIcons {
+    opacity: 1;
+    display: flex;  
+    width: 25%;
+}
+.Icon2:hover .Icon2 {
+    opacity: .5;
+}
+#headerParagraph {
+    background-color: rgba(211, 211, 211, 0.664);
+    padding: 20px 60px 70px;
+}
+.containerHeaderParagraph {
+    color: rgb(219, 114, 53);
+    opacity: .7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    padding: 300px 0 auto;
+}
+.containerSection {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-gap: 10px;
+    background-color: white;
+    width: auto;
+    height: auto;
+    padding: 10px 10px 10px 0px;
+}
+.containerSectionLeft {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 15px;
+    background-color: lightgray;
+    height: auto;
+    width: auto;
+    padding: 10px;
+}
+.itemsSelectionLeft {
+    background-color: whitesmoke;
+    width: 1fr;
+    height: 1fr;
+}
+.containerSectionRight {
+    background-color: lightgray;
+    height: 100%;
+    width: auto;
+}
+.containerFoot {
+    display: flex;
+    background-color: red;
+    width: auto;
+    height: 50px;
+}
+#pFooter {
+    justify-items: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
