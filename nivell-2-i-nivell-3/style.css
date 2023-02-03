@@ -3,9 +3,6 @@
     max-width: 1200px;
     margin: auto;
 }
-body {
-    margin: 0 5%;
-}
 .center {
     margin: auto;
     padding: 10px;
@@ -61,6 +58,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: auto;
 }
 .containerSection {
@@ -73,6 +71,10 @@ body {
     padding: 10px 10px 10px 0px;
 }
 .containerSectionLeft {
+    display: flex;
+    flex-direction: column;
+}
+.containerSectionLeftGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -83,11 +85,41 @@ body {
     padding: 10px;
 }
 .itemsSelectionLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     background-color: whitesmoke;
     width: 1fr;
     height: 1fr;
 }
+.imageGrid {
+    display: flex;
+    height: 0;
+    padding: 10px; 
+    padding-bottom: 100%; 
+    background-position: center center;
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    color: yellow;
+    margin: auto;
+}
+.titleGrid {
+
+}
+.sectionGrid {
+
+}
+.footerGrid {
+
+}
+.containerSelectionLeftFooter {
+    background-color: lightgray;
+    text-align: center;
+    width: 100%;
+}
 .containerSectionRight {
+    text-align: center;
     background-color: lightgray;
     height: 100%;
     width: auto;
