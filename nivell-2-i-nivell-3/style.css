@@ -3,15 +3,12 @@
     max-width: 1200px;
     margin: auto;
 }
-.center {
-    margin: auto;
-    padding: 10px;
-  }
 .containerHeader {
     background-image: url(header.jpg);
     background-size: cover;
     background-position: 0%;
     width: auto;
+    animation: moveLeft 1s ease-in;
 }
 .ContainerNav {
     display: flex;
@@ -30,8 +27,14 @@
     align-items: center;
     width: 50%;
 }
-.Icon2 {
-    display: block;
+.Icon {
+    margin: 0px;
+    opacity: .5;
+}
+i:hover {
+    opacity: 1;
+}
+ul:hover {
     opacity: 1;
 }
 .ContainerNavIcons {
@@ -41,12 +44,6 @@
     align-items: center;
     width: 25%;
     gap: 10px;
-}
-.Icon {
-    margin: 0px;
-}
-.Icon2:hover .Icon2 {
-    opacity: .5;
 }
 #headerParagraph {
     background-color: rgba(211, 211, 211, 0.664);
@@ -61,14 +58,29 @@
     text-align: center;
     width: auto;
 }
-.containerSection {
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-gap: 10px;
-    background-color: white;
-    width: auto;
-    height: auto;
-    padding: 10px 10px 10px 0px;
+@media screen and (min-width: 768px) {
+    .containerSection {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-gap: 10px;
+        background-color: white;
+        width: auto;
+        height: auto;
+        padding: 10px 10px 10px 0px;
+        animation: moveRight 1s ease-in;
+    }
+}
+@media screen and (max-width: 768px) {
+    .containerSection {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-gap: 10px;
+        background-color: white;
+        width: auto;
+        height: auto;
+        padding: 10px 10px 10px 0px;
+        animation: moveRight 1s ease-in;
+    }
 }
 .containerSectionLeft {
     display: flex;
@@ -91,38 +103,48 @@
     background-color: whitesmoke;
     width: 1fr;
     height: 1fr;
+    padding: 10px;
 }
 .imageGrid {
-    display: flex;
-    height: 0;
-    padding: 10px; 
-    padding-bottom: 100%; 
-    background-position: center center;
-    background-size: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
     color: yellow;
-    margin: auto;
 }
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
 .titleGrid {
-
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgb(245, 142, 142);
+    color: white;
+    width: 100%;
 }
 .sectionGrid {
-
+    -webkit-column-count: 2; 
+    -moz-column-count: 2;
+    column-count: 2;
+    padding-top: 10px;
 }
 .footerGrid {
-
+    opacity: 0.8;
+    padding-top: 10px;
+    width: 100%;
 }
 .containerSelectionLeftFooter {
     background-color: lightgray;
     text-align: center;
     width: 100%;
+    padding: 10px;
 }
 .containerSectionRight {
     text-align: center;
     background-color: lightgray;
     height: 100%;
     width: auto;
+    padding: 10px;
 }
 .containerFooter {
     display: flex;
@@ -138,4 +160,25 @@
     border-right: 10px;
     border-style: solid;
     border-color: lightgrey;
+    animation: moveLeft 1s ease-in;
+}
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
