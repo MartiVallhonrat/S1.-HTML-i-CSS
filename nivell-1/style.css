@@ -3,24 +3,89 @@
 }
 .container1 {
     background: black;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     width: auto;
-    grid-gap: 5px;
+    gap: 5px;
     padding: 10px;
 }
 .item1 {
-    justify-items: auto;
-    color: red;
-    background-color: rgb(62, 86, 105);
-    padding: 10px 25px;
-    height: auto;
+    display: block;
+    background-color: red;
+    height: 15px
 }
-.item2 {
-    color: yellow;
+.containerSon2 {
     background-color: orange;
     padding: 10px 25px;
     height: auto;
+    gap: 20px;
+}
+.item2 {
+    display: block;
+    background-color: yellow;
+    height: 15px;
+} 
+.container2 {
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    padding: 10px;
+    gap: 10px;
+    height: auto;
+    width: auto;
+}
+.containerSon3{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background-color: rgb(82, 82, 189);
+    height: auto;
+    padding: 10px 25px;
+    gap: 10px;
+}
+.containerSonSon1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    height: auto;
+}
+.item3 {
+    display: block;
+    background-color: darkblue;
+    height: 15px;
+}
+.containerSonSon2 {
+    height: auto;
+}
+.item4 {
+    display: block;
+    background-color: lightblue;
+    height: 15px;
+}
+.containerSon4 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: orange;
+    padding: 10px 25px;
+    height: auto;
+    gap: 10px;
+}
+.item5 {
+    display: block;
+    background-color: rgb(219, 180, 107);
+    height: 15px;
+}
+.container3 {
+    display: grid;
+    grid-auto-rows: 1fr;
+    background-color: black;
+    padding: 10px;
+    width: auto;
+    height: auto;
+}
+.item6 {
+    display: block;
+    background-color: rgb(220, 176, 95);
+    height: 15px;
 }
 @media screen and (min-width: 768px) {
     .container2 {
@@ -33,56 +98,44 @@
         width: auto;
     }
 }
-@media screen and (max-width: 768px) {
-    .container2 {
-        background-color: yellow;
+@media  screen and (max-width: 600px) {
+    .containerSon1 {
         display: grid;
-        grid-template-rows: 2fr 1fr;
-        padding: 10px;
-        grid-gap: 10px;
+        grid-template-rows: 1fr 1fr 1fr;
+        background-color: rgb(62, 86, 105);
+        padding: 10px 25px;
         height: auto;
-        width: auto;
+        gap: 20px;
     }
-    @media screen and (max-width: 600px) {
-        .container1 {
-            background: black;
-            display: grid;
-            grid-template-rows: 2fr 1fr;
-            width: auto;
-            grid-gap: 5px;
-            padding: 10px;
-        } 
+}
+@media screen and (min-width: 600px) {
+    .containerSon1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        background-color: rgb(62, 86, 105);
+        padding: 10px 25px;
+        height: auto;
+        gap: 20px;
     }
-} 
-.item3 {
-    display: grid;
-    grid-template-rows: auto;
-    background-color: darkblue;
-    color: blue;
-    height: auto;
-    padding: 10px 25px;
+    .containerSonSon1 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        height: auto;
+    }
+    .containerSon4 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        background-color: red;
+        padding: 10px 25px;
+        height: auto;
+        gap: 10px;
+    }
+    .item5 {
+        display: block;
+        background-color: yellow;
+        height: 15px;
+    } 
 }
-#paragraph2item3 {
-    color: skyblue;
-}
-.item4 {
-    background-color: red;
-    color: yellow;
-    padding: 10px 25px;
-    height: auto;
-}
-
-.container3 {
-    display: grid;
-    grid-auto-rows: 1fr;
-    background-color: black;
-    padding: 10px;
-    width: auto;
-    height: 30px;
-}
-.item5 {
-    background-color: yellow;
-    place-self: auto;
-}
-
    
